@@ -134,3 +134,40 @@ docker exec kafka /opt/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell \
 ```
 
 For comprehensive Kafka topics guide, see [KAFKA-TOPICS-GUIDE.md](KAFKA-TOPICS-GUIDE.md)
+
+## Kafka Configuration
+
+### Understanding Parameters
+
+Complete guides for Kafka configuration:
+
+📘 **[KAFKA-PARAMETERS-GUIDE.md](KAFKA-PARAMETERS-GUIDE.md)** - Detailed explanation of all parameters
+- KRaft mode configuration
+- Replication and reliability settings
+- Performance tuning
+- Security setup
+- Production best practices
+- Troubleshooting common issues
+
+📄 **[KAFKA-PARAMS-CHEATSHEET.md](KAFKA-PARAMS-CHEATSHEET.md)** - Quick reference
+- Dev vs Production comparison
+- Most important parameters
+- Common configurations
+- Performance tuning templates
+
+### Available Configurations
+
+| File | Purpose | Use Case |
+|------|---------|----------|
+| `docker-compose.yml` | Single-node development setup | Local development, testing |
+| `docker-compose.production.yml` | Multi-node production cluster | Production deployment example |
+
+### Quick Start
+
+```bash
+# Development (current setup)
+docker compose up -d
+
+# Production example
+docker compose -f docker-compose.production.yml up -d
+```
